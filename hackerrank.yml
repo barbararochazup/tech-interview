@@ -2,7 +2,7 @@ version: 1.0
 configuration:
   has_webserver: true
   scoring:
-    command: gradle clean build
+    command: ./gradlew clean test
     files:
       - build/customReports/result.xml
     # Define hidden test cases and declare file paths below to evaluate candidates' submissions.
