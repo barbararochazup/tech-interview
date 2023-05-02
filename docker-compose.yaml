@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:15.2
+        restart: always
+        environment:
+          - POSTGRES_USER=stackspot-content-db
+          - POSTGRES_PASSWORD=stackspot-content-db
+        ports:
+          - '5432'
+        networks:
+          - stackspot-content-api
+
+
+networks:
+  stackspot-content-api:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.68.75.1/24
