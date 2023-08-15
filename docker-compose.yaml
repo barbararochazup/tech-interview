@@ -10,12 +10,3 @@ services:
           - '5432'
         networks:
           - stackspot-content-api
-
-
-networks:
-  stackspot-content-api:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.68.75.1/24
